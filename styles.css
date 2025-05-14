@@ -1,0 +1,76 @@
+/* ——— Reset & Base ——— */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+  width:100%; min-height:100%;
+  background:#0a0b0d; color:#e0e0d8;
+  font-family:'Roboto Slab', serif;
+  overflow-y:auto;
+  position:relative;
+}
+
+/* ——— CRT Overlays ——— */
+.overlay {
+  pointer-events:none;
+  position:fixed; inset:0; z-index:9999;
+}
+.noise {
+  background: url('/img/static_noise_small.gif') repeat;
+  opacity:0.04;
+}
+.scanlines {
+  background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 50%) repeat-y;
+  background-size:100% 3px; opacity:0.2;
+}
+
+/* ——— Container ——— */
+.container {
+  max-width:600px; margin:8% auto; padding:2rem;
+  background:rgba(10,11,13,0.8); border:2px solid #444;
+  box-shadow:0 0 20px rgba(0,255,0,0.3);
+  animation: screen-flicker 8s infinite;
+}
+
+/* ——— Header ——— */
+header h1 {
+  font-size:2.5rem; color:#7fa; text-align:center;
+}
+header .subtitle {
+  text-align:center; margin-top:0.5rem;
+  font-size:1rem; color:rgba(224,224,216,0.7);
+}
+
+/* ——— Info & Countdown ——— */
+.info {
+  margin:2rem 0;
+  line-height:1.6;
+}
+.info p {
+  margin-bottom:1rem;
+}
+#countdown {
+  font-size:1.1rem; text-align:center;
+  padding:0.5rem; background:rgba(0,0,0,0.6);
+  border-left:4px solid #7fa;
+}
+#timer {
+  font-weight:bold; color:#cfc;
+}
+
+/* ——— Player Button ——— */
+.player {
+  text-align:center; margin-top:2rem;
+}
+#play-btn {
+  padding:0.75rem 1.5rem; background:#7fa; border:none;
+  color:#0a0b0d; font-size:1rem; cursor:pointer;
+  transition:background 0.3s;
+}
+#play-btn:hover {
+  background:#6ea;
+}
+
+/* ——— Animations ——— */
+@keyframes screen-flicker {
+  0%,20%,40%,70%,100% { opacity:1; }
+  10%,30%,50%,60% { opacity:0.9; }
+}

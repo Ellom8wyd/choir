@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choir of the Shard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- CRT Overlays -->
+  <div class="overlay noise"></div>
+  <div class="overlay scanlines"></div>
+
+  <div class="container">
+    <header>
+      <h1>Choir of the Stars</h1>
+      <p class="subtitle">Disturbing recordings • 03:13</p>
+    </header>
+
+    <section class="info">
+      <p>
+        At precisely <strong>03:13</strong> every night, the ancient chant returns.  
+        Listen—let the voices guide you into the heart of the breach.
+      </p>
+      <div id="countdown">Next chant in: <span id="timer">--:--:--</span></div>
+    </section>
+
+    <section class="player">
+      <audio id="choir-audio" loop preload="auto">
+        <source src="./audio/starfall_chant_loop.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p>Don't forget, every story starts with <strong>A1</strong> and ends with <strong>Z26</strong></p>
+      <button id="play-btn">▶️ Play Chant</button>
+    </section>
+    <p>Ellom8wyd.github.io/<strong>REDACTED</strong></p>
+  </div>
+<!--Hello adventurer here is the next piece of the puzzle 123-->
+  <script src="script.js"></script>
+</body>
+</html>
